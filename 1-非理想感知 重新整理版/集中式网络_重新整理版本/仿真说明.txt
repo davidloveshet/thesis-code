@@ -1,3 +1,0 @@
-
-
-centralized_IID_figure_1.m 对应得到图3.1 和 3.2

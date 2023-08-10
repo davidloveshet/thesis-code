@@ -61,7 +61,7 @@ average_throuhgput_U_3_greedy_01 = np.array([0, 2.416335  , 2.4868675 , 2.480295
 # plt.plot( budget_list, optimal_throuhgput_U_2, '-', label = 'U=2, Hungarian')
 # plt.plot( budget_list, average_throuhgput_U_2, '--^', label = 'U=2, proposed')
 # plt.plot( budget_list, optimal_throughput_U_3_without_energy, '-', label = 'Hungarian')
-plt.plot( budget_list, optimal_throuhgput_U_3, '--', label = '$\pi^{*D}-$EC')
+plt.plot( budget_list, optimal_throuhgput_U_3, '--', label = '$\pi^{*C}-$EC')
 plt.plot( budget_list, average_throuhgput_U_3, '-^', label = '$\pi^{D}-$EC')
 plt.plot( budget_list, average_random, '-*', label = 'random with channel allocation')
 plt.plot( budget_list, average_random_without_allocation_energy, '-.', label = 'random without channel allocation')
@@ -154,7 +154,7 @@ plt.ylabel('throughput/energy (M/J)',fontsize=12)
 # plt.legend(ncol=2, fontsize=9, framealpha = 0)
 plt.legend(  fontsize= 10, framealpha = 0)
 plt.grid()
-# fig.savefig('average_5G_decentralized_comparison_.eps', dpi = 600, format = 'eps')
+fig.savefig('average_5G_decentralized_comparison_.eps', dpi = 600, format = 'eps')
 
 
 

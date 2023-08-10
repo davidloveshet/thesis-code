@@ -44,20 +44,22 @@ average_throuhgput_U_6 = np.array([0, 17.3787    , 17.78782   , 18.20011   , 18.
 
 
 
-plt.plot( budget_list, optimal_throuhgput_U_2, '-', label = 'U=2, Hungarian')
-plt.plot( budget_list, average_throuhgput_U_2, '--^', label = 'U=2, proposed')
+plt.plot( budget_list, optimal_throuhgput_U_2, '-', label = 'U=2,$\pi^{*C}-$EC')
+plt.plot( budget_list, optimal_throuhgput_U_3, '-', label = 'U=3,$\pi^{*C}-$EC')
+plt.plot( budget_list, optimal_throuhgput_U_4, '-', label = 'U=4,$\pi^{*C}-$EC')
+plt.plot( budget_list, optimal_throuhgput_U_5, '-', label = 'U=5,$\pi^{*C}-$EC')
+plt.plot( budget_list, optimal_throuhgput_U_6, '-', label = 'U=6,$\pi^{*C}-$EC')
 
-plt.plot( budget_list, optimal_throuhgput_U_3, '-', label = 'U=3, Hungarian')
-plt.plot( budget_list, average_throuhgput_U_3, '--^', label = 'U=3, proposed')
 
-plt.plot( budget_list, optimal_throuhgput_U_4, '-', label = 'U=4, Hungarian')
-plt.plot( budget_list, average_throuhgput_U_4, '--^', label = 'U=4, proposed')
 
-plt.plot( budget_list, optimal_throuhgput_U_5, '-', label = 'U=5, Hungarian')
-plt.plot( budget_list, average_throuhgput_U_5, '--^', label = 'U=5, proposed')
+plt.plot( budget_list, average_throuhgput_U_2, '--^', label = 'U=2,$\pi^{D}-$EC')
+plt.plot( budget_list, average_throuhgput_U_3, '--^', label = 'U=3,$\pi^{D}-$EC')
+plt.plot( budget_list, average_throuhgput_U_4, '--^', label = 'U=4,$\pi^{D}-$EC')
+plt.plot( budget_list, average_throuhgput_U_5, '--^', label = 'U=5,$\pi^{D}-$EC')
+plt.plot( budget_list, average_throuhgput_U_6, '--^', label = 'U=6,$\pi^{D}-$EC')
 
-plt.plot( budget_list, optimal_throuhgput_U_6, '-', label = 'U=6, Hungarian')
-plt.plot( budget_list, average_throuhgput_U_6, '--^', label = 'U=6, proposed')
+
+
 
 
 # optimal_reward_average_U_3 = np.array([0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203, 0.36975203]) * 100
@@ -121,11 +123,11 @@ plt.plot( budget_list, average_throuhgput_U_6, '--^', label = 'U=6, proposed')
 plt.xlabel('energy (J)',fontsize=12)
 plt.ylabel('throughput/energy (M/J)',fontsize=12)
 # plt.xlim([-1,42])
-# plt.ylim([0,80])
+plt.ylim([-4, 20 ])
 plt.legend(ncol=2, fontsize=11, framealpha = 0)
 # plt.legend( fontsize=12, framealpha = 0)
 plt.grid()
-# fig.savefig('average_energy_efficiency_Rayleigh_.eps', dpi = 600, format = 'eps')
+fig.savefig('average_energy_efficiency_Rayleigh_.eps', dpi = 600, format = 'eps')
 
 
 

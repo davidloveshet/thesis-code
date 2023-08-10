@@ -76,12 +76,12 @@ for i in range(len(budget_list)):
    
 # --------------------------------------------------------------------------------#    
    
-plt.plot(budget_list , optimal_average_reward_M_1, '-', label = 'optimal', LineWidth = '2')   
+plt.plot(budget_list , optimal_average_reward_M_1, '-', label = '$\pi^*-$EC', LineWidth = '2')   
  
 plt.plot(budget_list , average_reward_set_proposed, '--*', label = '$\pi-$EC', LineWidth = '2')
 plt.plot(budget_list , average_reward_set_MAB_without_energy, '--o', label = 'UCB', LineWidth = '2')
 plt.plot(budget_list , average_reward_set_random, '--.', label = 'random algorithm', LineWidth = '2')
-plt.plot(budget_list , average_reward_set_proposed_epsilon_01, '--^', label = '$\pi-$EC with $\epsilon$-greedy', LineWidth = '2')
+plt.plot(budget_list , average_reward_set_proposed_epsilon_01, '--^', label = '$\epsilon$-greedy', LineWidth = '2')
 plt.plot(budget_list , average_reward_set_c_UCB, '-^', label = 'c-UCB', LineWidth = '2')
 plt.plot(budget_list , average_reward_set_budget_limited_epsilon_First, '--', label = 'Budget-Limited $\epsilon$-First', LineWidth = '2')
 plt.plot(budget_list , average_reward_set_budget_EABS_UCB, '--x', label = 'EABS-UCB', LineWidth = '2')
@@ -96,7 +96,7 @@ plt.legend( ncol=1, fontsize=10, framealpha = 0)
 plt.xlim([-3, 98])
 plt.grid()
  
-# fig.savefig('algorithm_comparison.eps', dpi = 600, format = 'eps')
+fig.savefig('algorithm_comparison_single.eps', dpi = 600, format = 'eps')
 
 
 
